@@ -1,18 +1,72 @@
 * {
   box-sizing: border-box;
+  /* border: .5px lightblue solid; */
+
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: public sans;
+    color: #4a4a4a;
+}
+
+a {
+  color: lch(52.16% 77.24 302.13);
+}
+
+a:hover {
+  color: rgb(87, 72, 179);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+}
+
+h3 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:400;
+  font-size: 20px;  
+  color: #4a4a4a;
+}
+
+h3 p {
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #696969;
+
+}
+
+button {
+    height: 48px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    border: 0px;
+}
+
+button:hover {
+  background-color: blueviolet;
+}
+
+.nav {
+    min-height: 64px;
+    align-content: center;
 }
 
 /* Reusable width wrapper */
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 0px 16px;
 }
+
+
 
 /* Reusable width wrapper */
 .nav .container  {
@@ -26,9 +80,11 @@ align-items: center;
     height: 40px;
 }
 
+/* Nav */
+
 nav ul {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -38,3 +94,224 @@ nav a {
     color: black;  
     text-decoration: none;;
 }
+
+.navicon {
+  display: flex;
+  align-items:flex-start;
+  
+  border: red solid 1px;
+  width: 200px
+ 
+}
+
+.navicon img {height: 40px;}
+
+/* Banner */
+
+
+.banner {
+  background-color: #f2f2f2;
+}
+
+.banner-inner {
+  height: 500px;
+  display: flex;
+  padding: 32px 0px;
+  margin: 0;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.banner img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;     /* keeps proportions, crops overflow */
+  object-position: top;
+  display: block;
+  flex: 0 0 60%;  
+  padding: 0px 16px;     
+}
+
+
+
+/* Banner 2 */
+
+/* left */
+
+.banner2 {
+    background: white;
+    padding: 0px 16px; 
+    height: auto;  
+}
+
+.banner2-inner {
+    padding: 32px 0px;
+    display: flex;
+    gap: 24px;
+    min-height: 700px;
+}
+
+
+.banner2-left {
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0;
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.banner2-left img, video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 24px;
+  padding-left: 0px;
+}
+
+
+/* right */
+
+.banner2-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+     flex: 0 0 40%;
+  max-width: 40%;
+  padding: 24px 24px;
+}
+
+.banner2-inner {
+  align-items: flex-start;
+}
+
+/* Card layout: 35/65 split */
+
+.card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  min-width:400px;
+
+}
+
+/* 35% image / 65% text */
+.card-img {
+  flex: 0 0 35%;
+  max-width: 35%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+}
+
+
+.card-body h3, p, a{
+  margin: 4 0 8px;
+}
+
+
+.card-body a {
+  margin: 0;
+  display: inline-block;
+}
+
+
+/* Start learning */
+
+.learning {
+    background-color: #f2f2f2;
+}
+
+.learning h1 {
+    text-align: center;
+    margin: 0;
+    padding: 32px 0px;
+}
+
+.banner2-left h1 {
+  padding: 0px 0px;
+}
+
+.learning-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 0px 24px;
+}
+
+.box {
+    width: 100%;
+    min-width: 225px;
+    height: 380px;
+    background-color: white;
+    box-sizing: border-box;
+    max-height: 380px;
+    
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.boxtext {
+  padding: 0px 16px;
+}
+
+
+#bannertext {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem; /* control spacing between h1, p, button */
+}
+
+/* reduce space between the banner heading and paragraph */
+#bannertext h1 { margin: 0 0 0.5rem; }
+#bannertext p  { margin: 0; }
+
+/* remove any default button spacing inside banner text */
+#bannertext button { margin: 0; }
+
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+footer .legal {
+  display: flex;
+  justify-content:space-between;
+  margin: 16px 0px;
+  padding: 0px 16px;
+}
+
+
+/* learn mobile */
+
+.learn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0px 24px;
+}
+
+.learnbox {
+display: flex;
+align-items: center;
+padding-left: 24px;
+background-color: #b4b3b3;
+height: 50px;
+}
+
+  .mobile-only { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-only {display: none; }
+  .mobile-only {display:flex;}
+  .nav {
+    padding: 0px 24px;
+  }
+  }
