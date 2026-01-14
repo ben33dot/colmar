@@ -97,11 +97,9 @@ nav a {
 
 .navicon {
   display: flex;
-  align-items:flex-start;
-  
-  border: red solid 1px;
-  width: 200px
- 
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
 }
 
 .navicon img {height: 40px;}
@@ -244,6 +242,7 @@ nav a {
 .box {
     width: 100%;
     min-width: 225px;
+    max-width: 500px;
     height: 380px;
     background-color: white;
     box-sizing: border-box;
@@ -310,8 +309,26 @@ height: 50px;
 
 @media (max-width: 768px) {
   .desktop-only {display: none; }
-  .mobile-only {display:flex;}
+  .mobile-only 
+  {display:flex;
+}
   .nav {
     padding: 0px 24px;
   }
+  /* Make mobile nav edge-to-edge so .navicon can fill the space */
+  .nav.mobile-only { padding: ; }
+
+  .container.mobile-only {
+    max-width: 100%;
+    width: 100%;
+    padding: 0; /* remove horizontal padding */
+    margin: 0;
   }
+
+  /* ensure the navicon uses all available space inside the container */
+  .nav.mobile-only .navicon {
+    width: 100%;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+}
